@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Body Colour changing In JavaScript</title>
+</head>
+
+<body>
+    <h1>Body Colour changing In JavaScript</h1>
+
+    <button onclick="change_color()" id="mode_btn">Change Color</button>
+
+    <script>
+        let body = document.querySelector("body")
+        let curr_mode = "light";
+        function change_color() {
+            if (curr_mode === "light") {
+                curr_mode = "dark";
+                body.style.backgroundColor = "black"; // Set dark color
+                console.log("dark");
+                body.style.color = "white";
+            } else if (curr_mode === "dark") {
+                curr_mode = "light";
+                body.style.backgroundColor = "white"; // Set light color
+                body.style.color = "black";
+                console.log("light");
+            }
+        }
+    </script>
+</body>
+
+</html>
